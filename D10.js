@@ -379,12 +379,14 @@ const textTd = function () {
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
-/*const linkRed = function () {
-  const a = document.getElementsByTagName("a")
-  a.style.color = "red"
-  console.log(a)
+const backgroundColorLink = function () {
+  const allLink = document.querySelectorAll("a")
+  allLink.forEach((link) => {
+    link.style.backgroundColor = "red"
+  })
+  return allLink
 }
-linkRed()
+backgroundColorLink()
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
