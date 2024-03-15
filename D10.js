@@ -77,10 +77,13 @@ whoIsBigger(6, 13)
   Es.: splitMe("I love coding") => ritorna ["I", "Love", "Coding"]
 */
 const splitMe = (string) => {
-  for (let i = 0; i < string.length; i++) {
-    return string.split(" ")
-  }
+  const stringa = string.split(" ")
+  const firstLetter = stringa.map(
+    (word) => word.charAt(0).toUpperCase() + word.slice(1)
+  )
+  return firstLetter
 }
+
 console.log(splitMe("mi piace fare questi esercizi"))
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
