@@ -116,28 +116,33 @@ console.log(onlyLetters("oggi e il 15 marzo"))
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
-//const isThisAnEmail = (string) => {}
-
+const isThisAnEmail = (string) => {
+  if (string.includes("@")) {
+    console.log("es.6", "è un email")
+  } else {
+    console.log("es.6", "non è un email")
+  }
+}
+isThisAnEmail("jajodemaio@gmail.com")
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
-/*const whatDayIsIt = () => {
+const whatDayIsIt = () => {
   let dayOfTheWeek = [
-    "lunedì",
-    "martedì",
-    "mercoledì",
-    "giovedì",
-    "venerdì",
-    "sabato",
     "domenica",
+    "lunedi",
+    "martedi",
+    "mercoledi",
+    "giovedi",
+    "venerdi",
+    "sabato",
   ]
-  console.log(dayOfTheWeek)
-  const todayIs = new Date().getDay()
-  console.log(todayIs)
-  todayIs = dayOfTheWeek[todayIs]
-  console.log(todayIs)
+
+  let todayIs = new Date().getDay()
+
+  return dayOfTheWeek[todayIs]
 }
-whatDayIsIt()
+console.log("es 7", whatDayIsIt())
 /* ESERCIZIO 8
 Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
 Deve invocare la precedente funzione dice() il numero di volte specificato nel parametro, e deve tornare un oggetto contenente una proprietà "sum":
