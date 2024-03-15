@@ -103,7 +103,16 @@ deleteOne("ciao", false)
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
-//const onlyLetters= (string)=> {}
+const onlyLetters = (string) => {
+  let result = ""
+  for (let i = 0; i < string.length; i++) {
+    if (isNaN(parseInt(string[i]))) {
+      result += string[i]
+    }
+  }
+  return result
+}
+console.log(onlyLetters("oggi e il 15 marzo"))
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
